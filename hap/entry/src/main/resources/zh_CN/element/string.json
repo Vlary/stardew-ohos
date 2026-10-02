@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "星露谷物语"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "星露谷物语"
+    },
+    {
+      "name": "title",
+      "value": "星露谷物语"
+    },
+    {
+      "name": "button_text",
+      "value": "绘制矩形"
+    },
+    {
+      "name": "aware",
+      "value": "请求权限"
+    },
+    {
+      "name": "internet_reason",
+      "value": "联机网络访问"
+    }
+  ]
+}

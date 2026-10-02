@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <LangVersion>10</LangVersion>
+    <AssemblyName>stardewhost</AssemblyName>
+    <RootNamespace>StardewHost</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PublishAot>true</PublishAot>
+    <IlcDehydrate>false</IlcDehydrate>
+    <NativeLib>Shared</NativeLib>
+    <!-- 游戏反射面广（存档序列化/本地化/XTile）：关闭裁剪分析 -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 游戏本体（Steam 正版拷贝） -->
+    <Reference Include="Stardew Valley">
+      <HintPath>../game-files/Stardew Valley.dll</HintPath>
+    </Reference>
+    <Reference Include="StardewValley.GameData">
+      <HintPath>../game-files/StardewValley.GameData.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>../game-files/Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="xTile">
+      <HintPath>../game-files/xTile.dll</HintPath>
+    </Reference>
+    <Reference Include="TextCopy">
+      <HintPath>../game-files/TextCopy.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>../game-files/SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Steamworks.NET">
+      <HintPath>../game-files/Steamworks.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaxyCSharp">
+      <HintPath>../game-files/GalaxyCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaxyCSharpGlue">
+      <HintPath>../game-files/GalaxyCSharpGlue.dll</HintPath>
+    </Reference>
+    <Reference Include="BmFont">
+      <HintPath>../game-files/BmFont.dll</HintPath>
+    </Reference>
+    <Reference Include="CPExtBmFont">
+      <HintPath>../game-files/CPExtBmFont.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.Core">
+      <HintPath>../game-files/System.Data.HashFunction.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.Interfaces">
+      <HintPath>../game-files/System.Data.HashFunction.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.HashFunction.xxHash">
+      <HintPath>../game-files/System.Data.HashFunction.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>../game-files/Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <!-- OHOS 适配版 MonoGame（Cecil patch 游戏自带 3.8.0.1641） -->
+    <Reference Include="MonoGame.Framework">
+      <HintPath>../game-files/MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OHOS.Helper">
+      <HintPath>../helper/bin/Release/netstandard2.0/OHOS.Helper.dll</HintPath>
+    </Reference>
+    <RdXmlFile Include="rd.xml" />
+  </ItemGroup>
+
+</Project>

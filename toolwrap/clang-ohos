@@ -1,0 +1,7 @@
+#!/bin/bash
+args=()
+for a in "$@"; do
+  [ "$a" = "--target=aarch64-linux-musl" ] && a="--target=aarch64-linux-ohos"
+  args+=("$a")
+done
+exec $HOME/harmony-toolchain/clt26/command-line-tools/sdk/default/openharmony/native/llvm/bin/clang "${args[@]}"

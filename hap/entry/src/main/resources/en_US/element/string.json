@@ -1,0 +1,32 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Stardew Valley"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Stardew Valley"
+    },
+    {
+      "name": "title",
+      "value": "Stardew Valley"
+    },
+    {
+      "name": "button_text",
+      "value": "Draw Rectangle"
+    },
+    {
+      "name": "aware",
+      "value": "Request permission"
+    },
+    {
+      "name": "internet_reason",
+      "value": "LAN multiplayer access"
+    }
+  ]
+}

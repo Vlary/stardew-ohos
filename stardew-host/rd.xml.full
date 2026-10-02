@@ -1,0 +1,25 @@
+<Directives>
+  <Application>
+    <!-- 反射全保留：游戏本体与全部依赖（存档 XML 序列化、本地化、XTile、事件反射） -->
+    <Assembly Name="Stardew Valley" Dynamic="Required All" />
+    <Assembly Name="StardewValley.GameData" Dynamic="Required All" />
+    <Assembly Name="Lidgren.Network" Dynamic="Required All" />
+    <Assembly Name="xTile" Dynamic="Required All" />
+    <Assembly Name="TextCopy" Dynamic="Required All" />
+    <Assembly Name="Steamworks.NET" Dynamic="Required All" />
+    <Assembly Name="GalaxyCSharp" Dynamic="Required All" />
+    <Assembly Name="BmFont" Dynamic="Required All" />
+    <Assembly Name="CPExtBmFont" Dynamic="Required All" />
+    <Assembly Name="System.Data.HashFunction.Core" Dynamic="Required All" />
+    <Assembly Name="System.Data.HashFunction.Interfaces" Dynamic="Required All" />
+    <Assembly Name="System.Data.HashFunction.xxHash" Dynamic="Required All" />
+    <Assembly Name="Microsoft.Extensions.DependencyInjection.Abstractions" Dynamic="Required All" />
+    <Assembly Name="MonoGame.Framework" Dynamic="Required All" />
+    <!-- SkiaSharp 仅 IL 参与（无鸿蒙原生实现，运行期触碰才失败） -->
+    <Assembly Name="SkiaSharp" Dynamic="Required All" />
+    <!-- XmlSerializer 反射链需要 RuntimeType 的 GetMethod 等 override 不被裁 -->
+    <Assembly Name="System.Private.CoreLib">
+      <Type Name="System.RuntimeType" Dynamic="Required All" />
+    </Assembly>
+  </Application>
+</Directives>

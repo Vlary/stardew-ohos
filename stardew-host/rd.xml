@@ -1,0 +1,1067 @@
+<Directives>
+  <Application>
+    <Assembly Name="Stardew Valley" Dynamic="Required All" />
+    <Assembly Name="StardewValley.GameData" Dynamic="Required All" />
+    <Assembly Name="Lidgren.Network" Dynamic="Required All" />
+    <Assembly Name="xTile" Dynamic="Required All" />
+    <Assembly Name="TextCopy" Dynamic="Required All" />
+    <Assembly Name="Steamworks.NET" Dynamic="Required All" />
+    <Assembly Name="GalaxyCSharp" Dynamic="Required All" />
+    <Assembly Name="BmFont" Dynamic="Required All" />
+    <Assembly Name="CPExtBmFont" Dynamic="Required All" />
+    <Assembly Name="System.Data.HashFunction.Core" Dynamic="Required All" />
+    <Assembly Name="System.Data.HashFunction.Interfaces" Dynamic="Required All" />
+    <Assembly Name="System.Data.HashFunction.xxHash" Dynamic="Required All" />
+    <Assembly Name="Microsoft.Extensions.DependencyInjection.Abstractions" Dynamic="Required All" />
+    <Assembly Name="SkiaSharp" Dynamic="Required All" />
+    <Assembly Name="MonoGame.Framework" Dynamic="Required All" />
+    <Assembly Name="System.Private.CoreLib">
+      <Type Name="System.RuntimeType" Dynamic="Required All" />
+    </Assembly>
+  <Assembly Name="Stardew Valley">
+    <Type Name="Netcode.AbstractNetEvent1`1+Event[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="Netcode.FieldChange`2[[Netcode.NetBool, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Netcode.FieldChange`2[[Netcode.NetString, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Netcode.FieldChange`2[[StardewValley.Network.NetPosition, Stardew Valley],[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="Netcode.INetObject`1[[Netcode.NetFields, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetArray`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetArray`2[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.Buildings.Building, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.Debris, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.NPC, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.Objects.Furniture, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.Projectiles.Projectile, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.TerrainFeatures.LargeTerrainFeature, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1[[StardewValley.TerrainFeatures.ResourceClump, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetCollection`1+ContentsChangeEvent[[StardewValley.NPC, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.BellsAndWhistles.ParrotUpgradePerch+UpgradeState, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Debris+DebrisType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.FarmerTeam+RemoteBuildingPermissions, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.FarmerTeam+SleepAnnounceModes, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.FriendshipStatus, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Game1+MineChestType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.GameData.SpecialOrders.QuestDuration, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Gender, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.LightSource+LightContext, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Locations.DesertFestival+RaceState, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Monsters.Ghost+GhostVariant, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Monsters.LavaLurk+State, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Objects.BedFurniture+BedType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Objects.Chest+SpecialChestTypes, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Objects.Clothing+ClothesType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.ProposalResponse, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.ProposalType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.Season, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.ServerPrivacy, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.SpecialOrders.Objectives.GiftObjective+LikeLevels, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEnum`1[[StardewValley.SpecialOrders.SpecialOrderStatus, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.Farm+LightningStrikeEvent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.GameLocation+DamagePlayersEventArg, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.Monsters.ParryEventArgs, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.MovieViewerLockEvent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.Network.NetEvents.NutDropRequest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.Network.NetEvents.SetMailRequest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.Network.NetEvents.SetSimpleFlagRequest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1`1[[StardewValley.StartMovieEvent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[Netcode.NetPoint, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework],[Netcode.NetRectangle, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[Netcode.NetVector2, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[System.Int64, System.Private.CoreLib],[Netcode.NetLong, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[System.Single, System.Private.CoreLib],[Netcode.NetFloat, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetEvent1Field`2[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[Microsoft.Xna.Framework.Color, MonoGame.Framework],[Netcode.NetColor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[Netcode.NetPoint, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework],[Netcode.NetRectangle, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[Netcode.NetVector2, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[StardewValley.Quests.DescriptionElement, Stardew Valley],[StardewValley.Quests.NetDescriptionElementRef, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Boolean, System.Private.CoreLib],[StardewValley.InteriorDoor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Byte, System.Private.CoreLib],[Netcode.NetByte, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Double, System.Private.CoreLib],[Netcode.NetDouble, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Guid, System.Private.CoreLib],[Netcode.NetGuid, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Int32, System.Private.CoreLib],[Netcode.NetIntDelta, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Int32, System.Private.CoreLib],[StardewValley.Network.NetDirection, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Int64, System.Private.CoreLib],[Netcode.NetLong, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Single, System.Private.CoreLib],[Netcode.NetFloat, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.Single, System.Private.CoreLib],[Netcode.NetRotation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetFieldBase`2+NetFieldBaseBool[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetHashSet`1+ContentsChangeEvent[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetList`2[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[Netcode.NetPoint, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetList`2[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework],[Netcode.NetRectangle, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetList`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[Netcode.NetVector2, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetList`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetList`2[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetList`2[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetNullableEnum`1[[StardewValley.Object+PreserveType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectArray`1[[StardewValley.Monsters.DinoMonster+BreathProjectile, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectArray`1[[StardewValley.Object, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectList`1[[StardewValley.BellsAndWhistles.TrainCar, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectList`1[[StardewValley.FarmAnimal, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectList`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectList`1[[StardewValley.Minigames.NetLeaderboardsEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectList`1[[StardewValley.Quests.Quest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectList`1[[StardewValley.Warp, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetObjectShrinkList`1[[StardewValley.Chunk, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.AnimatedSprite, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.BellsAndWhistles.SandDuggy, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.BellsAndWhistles.Train, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.BuildingPaintColor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Characters.Horse, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Crop, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.FarmerRenderer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Inventories.Inventory, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.IslandGemBird, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.LightSource, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.MarriageDialogueReference, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Minigames.AbigailGame+JOTPKProgress, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Monsters.Monster, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Object, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Objects.Boots, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Objects.Chest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Objects.Clothing, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Objects.Hat, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Objects.Ring, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Quests.Quest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.TerrainFeatures.Bush, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.TerrainFeatures.HoeDirt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.Tool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRef`1[[StardewValley.WorldDate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRefBase`2+RefDeltaType" Dynamic="Required All" />
+    <Type Name="Netcode.NetRoot`1[[StardewValley.FarmerTeam, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRoot`1[[StardewValley.Network.NetWorldState, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="Netcode.NetRootDictionary`2[[System.Int64, System.Private.CoreLib],[StardewValley.Farmer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.Bimap`2[[System.Int64, System.Private.CoreLib],[Lidgren.Network.NetConnection, Lidgren.Network]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.Bimap`2[[System.Int64, System.Private.CoreLib],[System.UInt64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetIntDictionary`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetIntDictionary`2[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetIntDictionary`2[[System.Int64, System.Private.CoreLib],[Netcode.NetLong, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetLongDictionary`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetLongDictionary`2[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetLongDictionary`2[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetMutexQueue`1[[System.Guid, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetPointDictionary`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetPointDictionary`2[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetStringDictionary`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetStringDictionary`2[[System.Int32, System.Private.CoreLib],[Netcode.NetInt, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetStringDictionary`2[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetVector2Dictionary`2[[System.Boolean, System.Private.CoreLib],[Netcode.NetBool, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.NetVector2Dictionary`2[[System.String, System.Private.CoreLib],[Netcode.NetString, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.Network.OverlayDictionary`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[StardewValley.Object, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.Int32, System.Private.CoreLib],[StardewValley.Locations.MineInfo, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.Int64, System.Private.CoreLib],[StardewValley.Options, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Network.LocationWeather, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.String, System.Private.CoreLib],[System.Int32[], System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.SerializableDictionary`2[[System.String, System.Private.CoreLib],[System.UInt32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.StatsDictionary`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="StardewValley.StatsDictionary`1[[System.UInt32, System.Private.CoreLib]]" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="Steamworks.NET">
+    <Type Name="Steamworks.Callback`1[[Steamworks.GameLobbyJoinRequested_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.Callback`1[[Steamworks.GameOverlayActivated_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.Callback`1[[Steamworks.GamepadTextInputDismissed_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.Callback`1[[Steamworks.LobbyChatUpdate_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.Callback`1[[Steamworks.LobbyDataUpdate_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.Callback`1[[Steamworks.SteamNetConnectionStatusChangedCallback_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.CallResult`1[[Steamworks.EncryptedAppTicketResponse_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.CallResult`1[[Steamworks.LobbyCreated_t, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="Steamworks.CallResult`1[[Steamworks.LobbyEnter_t, Steamworks.NET]]" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="System.Collections">
+    <Type Name="System.Collections.Generic.Stack`1[[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Stack`1[[StardewValley.Dialogue, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Stack`1[[StardewValley.Menus.IClickableMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Stack`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="System.Collections.Concurrent">
+    <Type Name="System.Collections.Concurrent.ConcurrentDictionary`2[[System.Reflection.FieldInfo, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Concurrent.ConcurrentDictionary`2[[System.Type, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Concurrent.ConcurrentDictionary`2[[System.Type, System.Private.CoreLib],[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="System.Private.CoreLib">
+    <Type Name="System.Action`1[[Galaxy.Api.GalaxyID, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[Galaxy.Api.IAuthListener+FailureReason, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Buffs.BuffEffects, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.ConsoleAsync.GenericResult, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Farmer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Game1, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Game1+BundleType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Game1+MineChestType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Menus.IClickableMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Menus.JunimoNoteMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Menus.OptionsTextEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Menus.PurchaseAnimalsMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.MultipleMutexRequest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Network.OutgoingMessage, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Object, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.Objects.Furniture, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[StardewValley.TemporaryAnimatedSprite, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.IO.BinaryReader, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`1[[System.UInt32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.GalaxyID, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.ILobbyDataRetrieveListener+FailureReason, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.ILobbyLeftListener+LobbyLeaveReason, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.LobbyCreateResult, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.LobbyEnterResult, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[Microsoft.Xna.Framework.Graphics.SpriteBatch, MonoGame.Framework],[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[StardewValley.Farmer, Stardew Valley],[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[StardewValley.Farmer, Stardew Valley],[StardewValley.Monsters.Monster, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[StardewValley.Farmer, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[StardewValley.HouseRenovation, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[StardewValley.Inventories.InventoryIndex, Stardew Valley],[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[StardewValley.Item, Stardew Valley],[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`3[[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.GalaxyID, GalaxyCSharp],[Galaxy.Api.LobbyMemberStateChange, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Action`3[[StardewValley.Farmer, Stardew Valley],[StardewValley.Item, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Action`3[[StardewValley.Farmer, Stardew Valley],[StardewValley.NPC, Stardew Valley],[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Action`3[[StardewValley.Item, Stardew Valley],[StardewValley.Item, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Concurrent.ConcurrentQueue`1[[StardewValley.Network.Dedicated.DedicatedServer+FarmerWarp, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[StardewValley.BellsAndWhistles.Bird, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[StardewValley.Object, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Character, Stardew Valley],[StardewValley.Character, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Character, Stardew Valley],[StardewValley.MovieConcession, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Character, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.ISalable, Stardew Valley],[StardewValley.ISalable, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.ISalable, Stardew Valley],[StardewValley.ItemStockInformation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Item, Stardew Valley],[StardewValley.Menus.TailoringMenu+TailorHighlight, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Item, Stardew Valley],[StardewValley.Objects.TankFish, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Item, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Item, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Item, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Menus.ClickableTextureComponent, Stardew Valley],[StardewValley.Buff, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Menus.OptionsElement, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Minigames.AbigailGame+GameKeys, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[StardewValley.Minigames.CraneGame+GameButtons, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Steamworks.CSteamID, Steamworks.NET],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[Steamworks.HSteamNetConnection, Steamworks.NET],[StardewValley.SDKs.Steam.Internal.ConnectionData, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Byte, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Char, System.Private.CoreLib],[BmFont.FontChar, BmFont]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[StardewValley.Character, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[StardewValley.HairStyleMetadata, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[StardewValley.Menus.Billboard+BillboardDay, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[StardewValley.Menus.ClickableTextureComponent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[StardewValley.Pathfinding.SchedulePathDescription, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[System.Double, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int64, System.Private.CoreLib],[StardewValley.Network.NetReady.Internal.ReadyState, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int64, System.Private.CoreLib],[StardewValley.SDKs.Steam.Internal.ConnectionData, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int64, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Int64, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[Microsoft.Xna.Framework.Color, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[Microsoft.Xna.Framework.Graphics.Texture2D, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[Microsoft.Xna.Framework.Vector3, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.CachedMultiplayerMap, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.ChatCommands+ChatCommand, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Delegates.DebugCommandHandlerDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Delegates.EventCommandDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Delegates.EventPreconditionDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Delegates.GameStateQueryDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Delegates.ResolveItemQueryDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Delegates.TriggerActionDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Farmer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.AudioCueData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Fences.FenceData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.GarbageCans.GarbageCanEntryData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Locations.FishAreaData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Minecarts.MinecartDestinationData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Movies.MovieData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Shops.ShopData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Weddings.WeddingAttendeeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.WildTrees.WildTreeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameStateQuery+ParsedGameStateQuery[], Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Gender, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.ICue, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.ItemTypeDefinitions.IItemDataDefinition, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.ItemTypeDefinitions.ItemMetadata, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.ItemTypeDefinitions.ParsedItemData, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.LightSource, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Menus.ClickableComponent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Menus.LanguageSelectionMenu+LanguageEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Menus.SpecialCurrencyDisplay+CurrencyDisplayType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.MovieConcession, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.NetLogRecord, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Network.NetReady.Internal.BaseReadyCheck, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.NPC, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Tests.ExtractSyntaxDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.TokenizableStrings.TokenParserDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Triggers.CachedAction, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Type, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[xTile.Tiles.TileSheet, xTile]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Type, System.Private.CoreLib],[ObjToStr+ToStringDescription, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Type, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.Type, System.Private.CoreLib],[System.Xml.Serialization.XmlSerializer, System.Private.Xml]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[Galaxy.Api.GalaxyID, GalaxyCSharp]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.IO.MemoryStream, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2+Enumerator[[Microsoft.Xna.Framework.Point, MonoGame.Framework],[StardewValley.InteriorDoor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[Lidgren.Network.NetConnection, Lidgren.Network]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[StardewValley.ISalable, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[StardewValley.Minigames.AbigailGame+GameKeys, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[StardewValley.Minigames.MineCart+CollectableFruits, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[StardewValley.Minigames.MineCart+MineCartCharacter, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[StardewValley.TerrainFeatures.Grass, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[Steamworks.HSteamNetConnection, Steamworks.NET]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[System.Int64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[System.UInt64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.Buff, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.BigCraftables.BigCraftableData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Buildings.BuildingData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Characters.CharacterData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Crops.CropData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.FarmAnimals.FarmAnimalData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.FloorsAndPaths.FloorPathData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.FruitTrees.FruitTreeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.JukeboxTrackData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.LocationContexts.LocationContextData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Locations.LocationData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Objects.ObjectData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Pants.PantsData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Pets.PetData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Shirts.ShirtData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Tools.ToolData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Weapons.WeaponData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[StardewValley.MachineDataUtility+GetOutputTokenValueDelegate, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IDictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IEnumerator`1[[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IEnumerator`1[[StardewValley.Buff, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IEnumerator`1[[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IEnumerator`1[[StardewValley.ItemTypeDefinitions.ParsedItemData, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IEnumerator`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IEnumerator`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IList`1[[StardewValley.DelayedAction, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IList`1[[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IList`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IList`1[[StardewValley.Menus.IClickableMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IList`1[[StardewValley.Network.OutgoingMessage, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.IList`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.KeyValuePair`2[[System.Int64, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Color, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Graphics.Texture2D, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Input.Keys, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Vector3, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Microsoft.Xna.Framework.Vector4, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[Netcode.INetSerializable, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[ObjToStr+ToStringMember, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.Bird, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.Critter, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.MoneyDial, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.ParrotPlatform, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.ParrotPlatform+Parrot, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.ParrotUpgradePerch+Parrot, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.BellsAndWhistles.SuspensionBridge, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Buffs.BuffAttributeDisplay, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Buildings.JumpingFish, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Buildings.PondFishSilhouette, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Buildings.Stable, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Character, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Characters.JunimoHarvester, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.ConsoleAsync.IAsyncOperation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.CraftingRecipe, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.DialogueLine, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Enchantments.BaseEnchantment, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.FarmAnimal, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Farmer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.FarmerSprite+AnimationFrame, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Game1, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingActionTile, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingChest, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingDrawLayer, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingItemConversion, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingMaterial, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingPlacementTile, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingSkin, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.BuildingTileProperty, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.IndoorItemAdd, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Buildings.IndoorItemMove, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Bundles.BundleData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Bundles.BundleSetData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Bundles.RandomBundleData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Characters.CharacterAppearanceData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Characters.CharacterHomeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Crafting.TailorItemRecipe, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.FarmAnimals.AlternatePurchaseAnimals, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.FarmAnimals.FarmAnimalProduce, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.FarmAnimals.FarmAnimalSkin, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.FishPonds.FishPondReward, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.FishPonds.FishPondWaterColor, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.FruitTrees.FruitTreeFruitData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.GarbageCans.GarbageCanItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.GenericSpawnItemDataWithCondition, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.GiantCrops.GiantCropHarvestItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.HomeRenovations.Rect, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.HomeRenovations.RectGroup, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.HomeRenovations.RenovationValue, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.LocationContexts.PassOutMailData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.LocationContexts.ReviveLocation, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.LocationContexts.WeatherCondition, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Locations.ArtifactSpotDropData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Locations.LocationMusicData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Locations.SpawnFishData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Locations.SpawnForageData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineEffects, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineItemAdditionalConsumedItems, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineItemOutput, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineOutputRule, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineOutputTriggerRule, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineSoundData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Machines.MachineTimeBlockers, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.MakeoverOutfits.MakeoverItem, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Minecarts.MinecartDestinationData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Movies.ConcessionTaste, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Movies.MovieCharacterReaction, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Movies.MovieCranePrizeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Movies.MovieData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Movies.MovieReaction, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Movies.MovieScene, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Museum.MuseumDonationRequirement, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Objects.ObjectBuffData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Objects.ObjectGeodeDropData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Pets.PetAnimationFrame, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Pets.PetBehavior, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Pets.PetBehaviorChanges, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Pets.PetBreed, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Pets.PetGift, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.PlantableRule, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.QuantityModifier, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Shops.ShopDialogueData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Shops.ShopItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Shops.ShopOwnerData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Shops.ShopThemeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.SpecialOrders.RandomizedElement, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.SpecialOrders.RandomizedElementItem, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.SpecialOrders.SpecialOrderObjectiveData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.SpecialOrders.SpecialOrderRewardData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.StatIncrement, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.TemporaryAnimatedSpriteDefinition, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Tools.ToolUpgradeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Weapons.WeaponProjectile, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.Weddings.WeddingAttendeeData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WildTrees.WildTreeChopItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WildTrees.WildTreeItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WildTrees.WildTreeSeedDropItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WildTrees.WildTreeTapItemData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WildTrees.WildTreeTextureData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WorldMaps.WorldMapAreaData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WorldMaps.WorldMapAreaPositionData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WorldMaps.WorldMapAreaPositionScrollTextZoneData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WorldMaps.WorldMapTextureData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameData.WorldMaps.WorldMapTooltipData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.HUDMessage, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Inventories.IInventory, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.ISalable, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.ItemTypeDefinitions.IItemDataDefinition, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Locations.IslandWestCave1+CaveCrystal, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Locations.MineShaft, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Locations.Racer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Locations.VolcanoDungeon, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Locations.Wisp, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.AnimalPage+AnimalEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.BuildingPaintMenu+RegionData, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.BuildingSkinMenu+SkinEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.Bundle, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.BundleIngredientDescription, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.CarpenterMenu+BlueprintEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ChatMessage, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ChatSnippet, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ClickableComponent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ClickableTextureComponent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.IClickableMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ICreditsBlock, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ItemGrabMenu+TransferredItemSprite, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.LoadGameMenu+MenuSlot, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.OptionsElement, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ProfileItem, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.ShopMenu+ShopTabClickableTextureComponent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.SocialPage+SocialEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Menus.SpecialCurrencyDisplay+CurrencyRenderInfo, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.AbigailGame+CowboyBullet, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.AbigailGame+CowboyMonster, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.AbigailGame+CowboyPowerup, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.BoatJourney+Entity, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.CraneGame+CraneGameObject, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.CraneGame+DrawEffect, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.Intro+Balloon, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.MineCart+BalanceTrack, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.MineCart+Entity, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.MineCart+GeneratorRoll, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.MineCart+LakeDecor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.MineCart+Spark, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.MineCart+Track, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Minigames.TargetGame+Target, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Network.NetMutex, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Network.Server, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.NPC, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.NPCController, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.NPCDialogueResponse, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Object, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Objects.Chest, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Objects.IPhoneHandler, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Objects.TankFish, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Objects.Wallpaper, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Pathfinding.SchedulePathDescription, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Prop, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Response, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.SDKs.LobbyUpdateListener, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Season, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.SpecialOrders.Objectives.OrderObjective, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.SpecialOrders.SpecialOrder, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.TemporaryAnimatedSprite, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.TerrainFeatures.Flooring+Neighbor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.TerrainFeatures.HoeDirt+Neighbor, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.TerrainFeatures.Leaf, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.TerrainFeatures.TerrainFeature, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.Warp, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.WeatherDebris, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[StardewValley.WorldMaps.MapRegion, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Action, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Char, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Guid, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Int32[], System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Int64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Reflection.FieldInfo, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Text.RegularExpressions.Regex, System.Text.RegularExpressions]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Type, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.UInt32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.Buffs.BuffAttributeDisplay, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.Buildings.Building, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.GameData.ModWallpaperOrFlooring, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.GameData.Objects.ObjectBuffData, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.ItemTypeDefinitions.IItemDataDefinition, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.MovieConcession, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.NPC, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1+Enumerator[[StardewValley.Objects.Furniture, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[StardewValley.Network.ChestHit.ChestHitArgs, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[System.Action, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[System.Double, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Characters.Child, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Farmer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.ItemTypeDefinitions.ParsedItemData, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Locations.Racer, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Minigames.BoatJourney+Entity, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Minigames.NetLeaderboardsEntry, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.Response, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[StardewValley.SaveMigrations.ISaveMigrator, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Comparison`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.EventHandler`1[[Microsoft.Xna.Framework.PreparingDeviceSettingsEventArgs, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[Microsoft.Xna.Framework.Graphics.Texture2D, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[StardewValley.Buff, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[StardewValley.Events.FarmEvent, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[StardewValley.Game1+BundleType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[StardewValley.Game1+MineChestType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`1[[System.Xml.Serialization.XmlSerializer, System.Private.Xml]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[Galaxy.Api.GalaxyID, GalaxyCSharp],[System.UInt64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework],[System.Guid, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[Netcode.NetInt, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[Netcode.NetLong, Stardew Valley],[System.Int64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Buff, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Buff, Stardew Valley],[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Buffs.BuffEffects, Stardew Valley],[Netcode.NetFloat, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Buildings.Building, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Buildings.Stable, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Crop, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Debris, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Dialogue, Stardew Valley],[StardewValley.Dialogue, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Dialogue, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Enchantments.BaseEnchantment, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Farmer, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Farmer, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Farmer, Stardew Valley],[System.Int64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Farmer, Stardew Valley],[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Farmer, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Locations.ArtifactSpotDropData, StardewValley.GameData],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Locations.SpawnFishData, StardewValley.GameData],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Objects.ObjectGeodeDropData, StardewValley.GameData],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Pants.PantsData, StardewValley.GameData],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Pets.PetBreed, StardewValley.GameData],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Shirts.ShirtData, StardewValley.GameData],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Shops.ShopOwnerData, StardewValley.GameData],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameData.Shops.ShopThemeData, StardewValley.GameData],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.GameLocation, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Internal.ItemQueryResult, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.ISalable, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Item, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Item, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Item, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.ItemTypeDefinitions.ParsedItemData, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.ItemTypeDefinitions.ParsedItemData, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.MapSeat, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Menus.AnimalPage+AnimalEntry, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Menus.AnimalPage+AnimalEntry, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Menus.LanguageSelectionMenu+LanguageEntry, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Menus.SocialPage+SocialEntry, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Menus.SocialPage+SocialEntry, Stardew Valley],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Minigames.MineCart+Track, Stardew Valley],[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Network.Server, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Network.Server, Stardew Valley],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.NPC, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Objects.Furniture, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.Quests.Quest, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.SpecialOrders.SpecialOrder, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.TerrainFeatures.HoeDirt, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.TerrainFeatures.LargeTerrainFeature, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[StardewValley.TerrainFeatures.ResourceClump, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Boolean, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Int32, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Int32, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Int64, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Object, System.Private.CoreLib],[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Reflection.FieldInfo, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Reflection.ParameterInfo, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Reflection.PropertyInfo, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Reflection.PropertyInfo, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Single, System.Private.CoreLib],[Microsoft.Xna.Framework.Color, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Single, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.String, System.Private.CoreLib],[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.String, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`2[[System.Type, System.Private.CoreLib],[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`3[[StardewValley.HouseRenovation, Stardew Valley],[System.Int32, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`3[[StardewValley.Minigames.MineCart+Track, Stardew Valley],[StardewValley.Minigames.MineCart+BaseTrackGenerator, Stardew Valley],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`3[[System.Boolean, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`3[[System.String, System.Private.CoreLib],[StardewValley.GameData.Characters.CharacterData, StardewValley.GameData],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`3[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`3[[System.UInt32, System.Private.CoreLib],[System.UInt32, System.Private.CoreLib],[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Func`5[[StardewValley.Farmer, Stardew Valley],[StardewValley.NPC, Stardew Valley],[StardewValley.Item, Stardew Valley],[System.Boolean, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Lazy`1[[Microsoft.Xna.Framework.Graphics.Texture2D, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[Microsoft.Xna.Framework.Color, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[Microsoft.Xna.Framework.Input.KeyboardState, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[Microsoft.Xna.Framework.Point, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[Microsoft.Xna.Framework.Vector2, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[Microsoft.Xna.Framework.Vector3, MonoGame.Framework]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.GameData.Shops.StackSizeVisibility, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.GameData.WildTrees.WildTreeGrowthStage, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.Gender, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.Menus.BundleIngredientDescription, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.Season, StardewValley.GameData]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.StackDrawType, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[StardewValley.WorldMaps.MapAreaPositionWithContext, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.DateTime, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.Int64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.UInt32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Nullable`1[[System.UInt64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.FarmAnimal, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.GameLocation, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.Item, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.Locations.MineShaft, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.Locations.VolcanoDungeon, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.Menus.IClickableMenu, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.Menus.LoadGameMenu+MenuSlot, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.Minigames.MineCart+Entity, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.MovieConcession, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.NPCController, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[StardewValley.TemporaryAnimatedSprite, Stardew Valley]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Predicate`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Threading.Tasks.TaskCompletionSource`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="System.Collections">
+    <Type Name="System.Collections.Generic.HashSet`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.HashSet`1[[System.Int64, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Stack`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Stack`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Queue`1[[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="System.Collections.Generic.List`1[[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="BmFont">
+    <Type Name="BmFont.XmlSourceReader" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="MonoGame.Framework">
+    <Type Name="Microsoft.Xna.Framework.Content.Texture2DReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.StringReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.Int32, System.Private.CoreLib],[System.String, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.Int32Reader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Buffs.BuffData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buffs.BuffData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.BooleanReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buffs.BuffAttributesData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.SingleReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.ModWallpaperOrFlooring, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.ModWallpaperOrFlooring, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.ModLanguage, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.ModLanguage, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Characters.CharacterData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Characters.CharacterData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[StardewValley.Season, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.Season, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.NpcLanguage, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.Gender, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.NpcAge, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.NpcManner, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.NpcSocialAnxiety, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.NpcOptimism, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.CalendarBehavior, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.SocialTabBehavior, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[System.Boolean, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Characters.EndSlideShowBehavior, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Characters.CharacterSpouseRoomData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.RectangleReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Characters.CharacterSpousePatioData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[System.Int32[], System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ArrayReader`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.PointReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.GenericSpawnItemDataWithCondition, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GenericSpawnItemDataWithCondition, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GenericSpawnItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.QuantityModifier, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.QuantityModifier, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.QuantityModifier+ModificationType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.QuantityModifier+QuantityModifierMode, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Characters.CharacterHomeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Characters.CharacterHomeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Characters.CharacterAppearanceData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Characters.CharacterAppearanceData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[Microsoft.Xna.Framework.Point, MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Characters.CharacterShadowData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[System.Int32, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.ModFarmType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.ModFarmType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Crops.CropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Crops.CropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.Season, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.PlantableRule, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.PlantableRule, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.PlantableRuleContext, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.PlantableResult, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DoubleReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Crops.HarvestMethod, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.AudioCueData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.AudioCueData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.ConcessionTaste, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.ConcessionTaste, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.BigCraftables.BigCraftableData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.BigCraftables.BigCraftableData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Buildings.BuildingData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingSkin, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingSkin, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingMaterial, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingMaterial, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.Vector2Reader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingPlacementTile, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingPlacementTile, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.IndoorItemMove, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.IndoorItemMove, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.IndoorItemAdd, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.IndoorItemAdd, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingChest, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingChest, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Buildings.BuildingChestType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingActionTile, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingActionTile, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingTileProperty, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingTileProperty, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingItemConversion, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingItemConversion, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Buildings.BuildingDrawLayer, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Buildings.BuildingDrawLayer, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.ConcessionItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.ConcessionItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Fences.FenceData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Fences.FenceData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FishPonds.FishPondData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FishPonds.FishPondData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FishPonds.FishPondWaterColor, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FishPonds.FishPondWaterColor, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FishPonds.FishPondReward, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FishPonds.FishPondReward, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Museum.MuseumRewards, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Museum.MuseumRewards, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Museum.MuseumDonationRequirement, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Museum.MuseumDonationRequirement, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.MannequinData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.MannequinData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.PassiveFestivalData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.PassiveFestivalData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.FarmAnimals.FarmAnimalData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalGender, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FarmAnimals.AlternatePurchaseAnimals, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FarmAnimals.AlternatePurchaseAnimals, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalHarvestType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalProduce, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalProduce, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalSkin, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalSkin, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FarmAnimals.FarmAnimalShadowData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.StatIncrement, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.StatIncrement, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.TriggerActionData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.TriggerActionData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.GiantCrops.GiantCropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GiantCrops.GiantCropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.GiantCrops.GiantCropHarvestItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GiantCrops.GiantCropHarvestItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.FloorsAndPaths.FloorPathData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FloorsAndPaths.FloorPathData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.FloorsAndPaths.FloorPathConnectType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.FloorsAndPaths.FloorPathShadowType, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Locations.LocationData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.LocationData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.CreateLocationData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Locations.ArtifactSpotDropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.ArtifactSpotDropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Locations.FishAreaData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.FishAreaData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Locations.SpawnFishData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.SpawnFishData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Locations.SpawnForageData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.SpawnForageData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Locations.LocationMusicData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Locations.LocationMusicData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.MusicContext, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.MonsterSlayerQuestData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.MonsterSlayerQuestData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GarbageCans.GarbageCanData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.GarbageCans.GarbageCanItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GarbageCans.GarbageCanItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.GarbageCans.GarbageCanEntryData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.GarbageCans.GarbageCanEntryData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.FruitTrees.FruitTreeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FruitTrees.FruitTreeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.FruitTrees.FruitTreeFruitData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.FruitTrees.FruitTreeFruitData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.MovieData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.MovieData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.MovieCranePrizeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.MovieCranePrizeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.MovieScene, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.MovieScene, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Machines.MachineData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineOutputRule, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineOutputRule, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineOutputTriggerRule, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineOutputTriggerRule, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Machines.MachineOutputTrigger, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineItemOutput, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineItemOutput, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineItemAdditionalConsumedItems, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineItemAdditionalConsumedItems, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineTimeBlockers, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Machines.MachineTimeBlockers, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineEffects, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineEffects, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Machines.MachineSoundData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineSoundData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.TemporaryAnimatedSpriteDefinition, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.TemporaryAnimatedSpriteDefinition, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Machines.MachineLight, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Pets.PetData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetSummitPerfectionEventData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Pets.PetBehavior, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetBehavior, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Pets.PetAnimationFrame, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetAnimationFrame, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Pets.PetAnimationLoopMode, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Pets.PetBehaviorChanges, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetBehaviorChanges, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Pets.PetGift, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetGift, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Pets.PetBreed, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pets.PetBreed, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.HomeRenovations.HomeRenovation, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.HomeRenovations.HomeRenovation, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.HomeRenovations.RenovationValue, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.HomeRenovations.RenovationValue, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.HomeRenovations.RectGroup, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.HomeRenovations.RectGroup, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.HomeRenovations.Rect, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.HomeRenovations.Rect, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.IncomingPhoneCallData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.IncomingPhoneCallData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.LocationContexts.LocationContextData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.LocationContexts.LocationContextData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.LocationContexts.WeatherCondition, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.LocationContexts.WeatherCondition, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.LocationContexts.ReviveLocation, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.LocationContexts.ReviveLocation, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.LocationContexts.PassOutMailData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.LocationContexts.PassOutMailData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Bundles.RandomBundleData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Bundles.RandomBundleData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Bundles.BundleSetData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Bundles.BundleSetData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Bundles.BundleData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Bundles.BundleData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.JukeboxTrackData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.JukeboxTrackData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.LostItem, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.LostItem, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Objects.ObjectData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Objects.ObjectData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Objects.ObjectBuffData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Objects.ObjectBuffData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Objects.ObjectGeodeDropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Objects.ObjectGeodeDropData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[System.Single, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.TrinketData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.TrinketData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Shops.ShopData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Shops.ShopData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[StardewValley.GameData.Shops.StackSizeVisibility, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Shops.StackSizeVisibility, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Shops.ShopOwnerData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Shops.ShopOwnerData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Shops.ShopDialogueData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Shops.ShopDialogueData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Shops.ShopThemeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Shops.ShopThemeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Shops.ShopItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Shops.ShopItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.Shops.LimitedStockMode, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.MakeoverOutfits.MakeoverOutfit, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.MakeoverOutfits.MakeoverOutfit, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.MakeoverOutfits.MakeoverItem, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.MakeoverOutfits.MakeoverItem, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[StardewValley.Gender, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.SpecialOrders.SpecialOrderData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.SpecialOrders.SpecialOrderData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.SpecialOrders.QuestDuration, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.SpecialOrders.RandomizedElement, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.SpecialOrders.RandomizedElement, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.SpecialOrders.RandomizedElementItem, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.SpecialOrders.RandomizedElementItem, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.SpecialOrders.SpecialOrderObjectiveData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.SpecialOrders.SpecialOrderObjectiveData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.SpecialOrders.SpecialOrderRewardData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.SpecialOrders.SpecialOrderRewardData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Crafting.TailorItemRecipe, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Crafting.TailorItemRecipe, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Minecarts.MinecartNetworkData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Minecarts.MinecartNetworkData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Minecarts.MinecartDestinationData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Minecarts.MinecartDestinationData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.MovieCharacterReaction, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.MovieCharacterReaction, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Movies.MovieReaction, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.MovieReaction, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.SpecialResponses, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Movies.CharacterResponse, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Weddings.WeddingData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Weddings.WeddingAttendeeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Weddings.WeddingAttendeeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Weapons.WeaponData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Weapons.WeaponData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Weapons.WeaponProjectile, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Weapons.WeaponProjectile, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Pants.PantsData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Pants.PantsData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.WorldMaps.WorldMapRegionData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WorldMaps.WorldMapRegionData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WorldMaps.WorldMapTextureData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WorldMaps.WorldMapTextureData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WorldMaps.WorldMapAreaData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WorldMaps.WorldMapAreaData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WorldMaps.WorldMapTooltipData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WorldMaps.WorldMapTooltipData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WorldMaps.WorldMapAreaPositionData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WorldMaps.WorldMapAreaPositionData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WorldMaps.WorldMapAreaPositionScrollTextZoneData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WorldMaps.WorldMapAreaPositionScrollTextZoneData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Powers.PowersData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Powers.PowersData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[System.Object, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Shirts.ShirtData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Shirts.ShirtData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.WildTrees.WildTreeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WildTrees.WildTreeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WildTrees.WildTreeTextureData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WildTrees.WildTreeTextureData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WildTrees.WildTreeSeedDropItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WildTrees.WildTreeSeedDropItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WildTrees.WildTreeItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WildTrees.WildTreeChopItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WildTrees.WildTreeChopItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.NullableReader`1[[StardewValley.GameData.WildTrees.WildTreeGrowthStage, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EnumReader`1[[StardewValley.GameData.WildTrees.WildTreeGrowthStage, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WildTrees.WildTreeTapItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.WildTrees.WildTreeTapItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.WildTrees.WildTreeItemData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.DictionaryReader`2[[System.String, System.Private.CoreLib],[StardewValley.GameData.Tools.ToolData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Tools.ToolData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[StardewValley.GameData.Tools.ToolUpgradeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ReflectiveReader`1[[StardewValley.GameData.Tools.ToolUpgradeData, StardewValley.GameData, Version=1.6.15.24356, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.EffectReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.SpriteFontReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[Microsoft.Xna.Framework.Rectangle, MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[System.Char, System.Private.CoreLib]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.CharReader" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.ListReader`1[[Microsoft.Xna.Framework.Vector3, MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, PublicKeyToken=null]]" Dynamic="Required All" />
+    <Type Name="Microsoft.Xna.Framework.Content.Vector3Reader" Dynamic="Required All" />
+  </Assembly>
+  <Assembly Name="xTile">
+    <Type Name="xTile.Pipeline.TideReader" Dynamic="Required All" />
+  </Assembly>
+  </Application>
+</Directives>

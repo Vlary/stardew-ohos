@@ -1,0 +1,2 @@
+#!/bin/sh
+exec -a ld.lld $HOME/harmony-toolchain/clt26/command-line-tools/sdk/default/openharmony/native/llvm/bin/lld "$@"

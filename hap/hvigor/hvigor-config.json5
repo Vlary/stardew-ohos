@@ -1,0 +1,16 @@
+{
+  "modelVersion": "6.0.1",
+  "dependencies": {
+    "@ohos/hvigor-ohos-plugin": "6.26.2"
+  },
+  "execution": {
+    "analyze": "normal",
+    "daemon": false
+  },
+  "logging": {
+    "level": "info"
+  },
+  "debugging": {
+    "stacktrace": false
+  }
+}

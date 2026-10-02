@@ -1,0 +1,2 @@
+#!/bin/bash
+exec $HOME/harmony-toolchain/clt26/command-line-tools/sdk/default/openharmony/native/llvm/bin/clang++ -stdlib=libc++ "$@"

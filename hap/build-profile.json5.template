@@ -1,0 +1,55 @@
+// ⚠️ 签名配置模板：复制为 build-profile.json5 后填入你自己的调试签名材料
+// 获取签名材料的最简方式（需华为开发者账号登录）：
+//   source <CLT>/env26.sh && export JAVA_HOME=<JDK> && devecocli signature generate
+// 采用官方调试签名（profile 绑定包名与设备 UDID），可直接安装到你的设备。
+{
+  app: {
+    products: [
+      {
+        name: 'default',
+        compatibleSdkVersion: '26.0.0',
+        compileSdkVersion: '26.0.0',
+        targetSdkVersion: '26.0.0',
+        runtimeOS: 'HarmonyOS',
+        signingConfig: 'default',
+      },
+    ],
+    buildModeSet: [
+      {
+        name: 'debug',
+      },
+      {
+        name: 'release',
+      },
+    ],
+    signingConfigs: [
+      {
+        name: 'default',
+        type: 'HarmonyOS',
+        material: {
+          certpath: '<你的证书路径>/xxx.cer',
+          keyAlias: 'debugKey',
+          keyPassword: '<你的密钥口令>',
+          profile: '<你的 profile 路径>/xxx.p7b',
+          signAlg: 'SHA256withECDSA',
+          storeFile: '<你的密钥库路径>/xxx.p12',
+          storePassword: '<你的密钥库口令>',
+        },
+      },
+    ],
+  },
+  modules: [
+    {
+      name: 'entry',
+      srcPath: './entry',
+      targets: [
+        {
+          name: 'default',
+          applyToProducts: [
+            'default',
+          ],
+        },
+      ],
+    },
+  ],
+}
