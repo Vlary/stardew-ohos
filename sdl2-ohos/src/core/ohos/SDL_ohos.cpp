@@ -753,9 +753,10 @@ bool OHOS_RemoveChildNode(napi_ref nodeChildRef)
 
 bool OHOS_ResizeNode(napi_ref nodeRef, int w, int h)
 {
-    /* 节点尺寸始终跟随根容器自适应；实际 surface 尺寸经 OnSurfaceChanged
-     * 同步回 SDL window->w/h 并触发 SIZE_CHANGED，由上层按真实尺寸重设 backbuffer */
-    return SDL_ResizeNode(nodeRef, "100%", "100%");
+    /* 真实尺寸：全屏时上层传屏幕尺寸（铺满），窗口模式传所选分辨率——
+     * 保证「窗口尺寸 == 游戏画面尺寸」。surface 变化经 OnSurfaceChanged
+     * 同步回 window->w/h 并触发 SIZE_CHANGED。 */
+    return SDL_ResizeNode(nodeRef, to_string(w), to_string(h));
 }
 
 bool OHOS_ReParentNode(napi_ref nodeParentNewRef, napi_ref nodeChildRef)

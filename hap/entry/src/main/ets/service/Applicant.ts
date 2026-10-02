@@ -124,17 +124,26 @@ export function setOrientationBis(mContext: common.UIAbilityContext, w: number, 
 
 
 export function Request_SetWindowStyle(mContext: common.UIAbilityContext, fullscree: boolean) {
-  console.log("in OHOS_NAPI_SetWindowStyle ")
+  console.log("in OHOS_NAPI_SetWindowStyle fullscreen=" + fullscree)
   try {
-    let promise = window.getLastWindow(mContext).then((win) => {
-      win.setWindowLayoutFullScreen(fullscree)
-      promise.then(() => {
-        console.info('Succeeded in setting the window layout to full-screen mode.')
-      }).catch((err) => {
-        console.error('Failed to set the window layout to full-screen mode. Cause:' + JSON.stringify(err))
+    window.getLastWindow(mContext).then((win) => {
+      // 布局全屏（内容铺满到状态栏区域）
+      win.setWindowLayoutFullScreen(fullscree).catch((err: BusinessError) => {
+        console.error('setWindowLayoutFullScreen failed: ' + JSON.stringify(err))
       })
+      // 系统栏显隐（status/navigation；PC 上 Dock 属于系统栏）
+      try {
+        win.setWindowSystemBarEnable(fullscree ? [] : ['status', 'navigation']).catch((err: BusinessError) => {
+          console.error('setWindowSystemBarEnable failed: ' + JSON.stringify(err))
+        })
+      } catch (e2) { console.error('setWindowSystemBarEnable ex: ' + JSON.stringify(e2)) }
+      // 沉浸式：PC 上隐藏标题栏与 Dock（并禁用悬停唤出）
+      try {
+        win.setImmersiveModeEnabledState(fullscree)
+        console.info('immersive=' + fullscree)
+      } catch (e3) { console.error('setImmersiveModeEnabledState ex: ' + JSON.stringify(e3)) }
     })
   } catch (exception) {
-    console.error('Failed to set the window layout to full-screen mode. Cause:' + JSON.stringify(exception))
+    console.error('Request_SetWindowStyle Cause:' + JSON.stringify(exception))
   }
 }

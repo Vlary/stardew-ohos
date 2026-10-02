@@ -1,4 +1,5 @@
 import entry from 'libentry.so'
+import { Request_SetWindowStyle } from './Applicant'
 /*
  * Copyright (c) 2023 Huawei Device Co., Ltd.
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -291,7 +292,9 @@ export class ArkNapiCallback implements NapiCallback {
   }
 
   setWindowStyle(fullscree: boolean): void {
-
+    if (sdlPageContext != null) {
+      Request_SetWindowStyle(sdlPageContext, fullscree)
+    }
   }
 
   setOrientation(w: number, h: number, resizable: number, hint: string): void {

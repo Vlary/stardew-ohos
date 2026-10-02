@@ -75,6 +75,11 @@ export function WindowBuilderForView(params: NodeParams) {
           } else if (event.type == KeyType.Up) {
             entry.sendKey(0, event.keyCode)
           }
+          // ESC(2070)/Tab(2049) 消费：阻止系统级行为（ESC 退出全屏沉浸态、Tab 焦点漫游），
+          // 游戏内键义已由上面的 sendKey 自行分发
+          if (event.keyCode == 2070 || event.keyCode == 2049) {
+            return true
+          }
           return false
         })
     } else if (params?.node_type == NodeType.UIExtension) {
