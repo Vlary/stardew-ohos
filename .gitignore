@@ -40,3 +40,5 @@ hap/entry/build/
 *.tar.gz
 hap/entry/src/main/resources/rawfile/
 hap/build-profile.json5
+tools/*/bin/
+tools/*/obj/

@@ -107,15 +107,17 @@ internal static class Program
 
                 try
                 {
-                    // rawfile 不落盘（保留在 hap zip 内）——从 hap 提取 Content 到 el2
+                    // rawfile 不落盘（保留在 hap zip 内）——从 hap 提取 Content 到 el2。
+                    // 智能同步：已存在且大小一致的文件跳过（首次全量 ~5 分钟；
+                    // 之后仅同步差异 —— 这也是「mod 部署」机制：替换 rawfile 中资产后重启即生效）。
                     var hapPath = bundleDir + "/entry.hap";
                     Console.WriteLine($"[SDV] hap exists={System.IO.File.Exists(hapPath)}");
-                    if (System.IO.File.Exists(hapPath) && !System.IO.Directory.Exists(dir + "/Content"))
+                    if (System.IO.File.Exists(hapPath))
                     {
-                        Console.WriteLine("[SDV] extracting Content from hap zip ...");
+                        Console.WriteLine("[SDV] syncing Content from hap zip ...");
                         using var zip = System.IO.Compression.ZipFile.OpenRead(hapPath);
                         var entries = zip.Entries;
-                        int n = 0;
+                        int n = 0, skip = 0;
                         long bytes = 0;
                         var buf = new byte[8 * 1024 * 1024];
                         foreach (var e in entries)
@@ -124,6 +126,8 @@ internal static class Program
                                 continue;
                             var rel = e.FullName.Substring("resources/rawfile/".Length);
                             var dst = System.IO.Path.Combine(dir, rel);
+                            var fi = new System.IO.FileInfo(dst);
+                            if (fi.Exists && fi.Length == e.Length) { skip++; continue; }
                             var dstDir = System.IO.Path.GetDirectoryName(dst);
                             if (!string.IsNullOrEmpty(dstDir) && !System.IO.Directory.Exists(dstDir))
                                 _ = System.IO.Directory.CreateDirectory(dstDir);
@@ -136,9 +140,9 @@ internal static class Program
                                 bytes += r;
                             }
                             n++;
-                            if (n % 500 == 0) Console.WriteLine($"[SDV] extracted {n} files ({bytes / 1048576}MB)");
+                            if (n % 500 == 0) Console.WriteLine($"[SDV] synced {n} files ({bytes / 1048576}MB)");
                         }
-                        Console.WriteLine($"[SDV] extraction done: {n} files, {bytes / 1048576}MB");
+                        Console.WriteLine($"[SDV] sync done: 写入 {n} 个 / 跳过 {skip} 个, {bytes / 1048576}MB");
                     }
                 }
                 catch (Exception je) { Console.WriteLine($"[SDV] extract FAIL: {je.Message}"); }
