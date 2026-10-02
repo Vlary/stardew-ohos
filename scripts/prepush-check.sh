@@ -44,7 +44,8 @@ else
     ok "✓ 无大文件（>5MB）入库"
 fi
 
-GAME=$(echo "$FILES" | grep -iE 'game-files/|rawfile/|\.dll$|\.xnb$|\.hap$' | head -5)
+# mods/ 下的 .xnb/.png 为 Mod 产物（自制），放行；其余位置照拦
+GAME=$(echo "$FILES" | grep -v '^mods/' | grep -iE 'game-files/|rawfile/|\.dll$|\.xnb$|\.hap$' | head -5)
 if [ -n "$GAME" ]; then
     red "✗ [疑似游戏文件/产物入库]"; echo "$GAME" | sed 's/^/    /'; FAIL=1
 else
