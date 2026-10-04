@@ -47,54 +47,75 @@ internal static class Program
 
     static void RedirectFd(string path, int fd)
     {
-        int nfd = open(path, 0x41 /*O_WRONLY|O_CREAT*/, 420 /*0644*/);
+        // O_APPEND：多次运行追加保留历史（崩溃诊断常需对比崩溃前后两次运行）
+        int nfd = open(path, 0x441 /*O_WRONLY|O_CREAT|O_APPEND*/, 420 /*0644*/);
         if (nfd >= 0) dup2(nfd, fd);
     }
 
-    [StructLayout(LayoutKind.Sequential)]
-    struct SigAction
+    // Linux/musl/glibc 的 struct sigaction 布局（aarch64 与 x86_64 相同）：
+    // handler(8) + sigset_t sa_mask(128) + sa_flags(4+pad4) + sa_restorer(8) = 152
+    unsafe struct SigAction
     {
-        public IntPtr handler;
-        public IntPtr mask;
+        public delegate* unmanaged[Cdecl]<int, IntPtr, IntPtr, void> handler;
+        public fixed byte mask[128];
         public int flags;
         public IntPtr restorer;
     }
 
-    [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    private unsafe delegate void FatalDel(int sig, IntPtr si, IntPtr ctx);
+    // 信号处理器：NativeAOT 下必须 [UnmanagedCallersOnly]+函数指针注册
+    // （Marshal.GetFunctionPointerForDelegate 走委托 marshaling，之前在此触发 OOM）。
+    // 处理器内仅做无分配操作：静态字节数组 + write 系统调用。
+    static readonly byte[] FatalMsg4  = System.Text.Encoding.UTF8.GetBytes("SDV FATAL SIGILL(4)\n");
+    static readonly byte[] FatalMsg5  = System.Text.Encoding.UTF8.GetBytes("SDV FATAL SIGTRAP(5)\n");
+    static readonly byte[] FatalMsg6  = System.Text.Encoding.UTF8.GetBytes("SDV FATAL SIGABRT(6)\n");
+    static readonly byte[] FatalMsg7  = System.Text.Encoding.UTF8.GetBytes("SDV FATAL SIGBUS(7)\n");
+    static readonly byte[] FatalMsg11 = System.Text.Encoding.UTF8.GetBytes("SDV FATAL SIGSEGV(11)\n");
 
     [DllImport("libc.so", CallingConvention = CallingConvention.Cdecl)]
     private static extern int sigaction(int sig, ref SigAction act, IntPtr old);
 
+    [UnmanagedCallersOnly(CallConvs = new[] { typeof(System.Runtime.CompilerServices.CallConvCdecl) })]
     static unsafe void FatalHandler(int sig, IntPtr si, IntPtr ctx)
     {
-        // ucontext_t: uc_mcontext (fp regs + es + regs)，x64 偏移不适用——arm64: regs at ctx+0xb8? 用简版：只打 signal
-        byte[] msg = System.Text.Encoding.ASCII.GetBytes($"[SDV] FATAL signal {sig}\n");
+        var msg = sig == 11 ? FatalMsg11 : sig == 6 ? FatalMsg6 : sig == 7 ? FatalMsg7 : sig == 5 ? FatalMsg5 : FatalMsg4;
         fixed (byte* p = msg)
-            _ = write(2, ref p[0], msg.Length);
+            _ = write(2, ref *p, msg.Length);
         _ = _exit(66);
     }
 
     static unsafe void InstallFatalHandlers()
     {
-        var sa = new SigAction { handler = Marshal.GetFunctionPointerForDelegate<FatalDel>(FatalHandler), flags = 0x4 };
+        // 函数指针字段直接赋 &Method：ILC 生成 native 入口地址。
+        // （先前 cast 成 IntPtr 会让 ILC 生成"托管入口"→ 信号跳进 stub 抛
+        //  "attempted to call a UnmanagedCallersOnly method from managed code"）
+        SigAction sa;
+        sa.handler = &FatalHandler;
+        for (int i = 0; i < 128; i++) sa.mask[i] = 0;
+        sa.flags = 0x4; // SA_SIGINFO
+        sa.restorer = IntPtr.Zero;
         foreach (int s in new[] { 4, 5, 6, 7, 11 }) _ = sigaction(s, ref sa, IntPtr.Zero);
+        Console.WriteLine("[SDV] fatal handlers installed");
     }
 
     [UnmanagedCallersOnly(EntryPoint = "SDL_main")]
     public static unsafe int Main(int argc, IntPtr argv)
     {
         // 入口第一拍：直接写探针文件（验证 ReversePInvoke/方法体是否到达）
-        byte[] probe = System.Text.Encoding.ASCII.GetBytes("[SDV] SDL_main entered\n");
-        int pfd = open("/data/storage/el2/base/haps/entry/files/probe.log", 0x241 /*O_WRONLY|O_CREAT|O_APPEND*/, 420);
+        string probeStr = $"[SDV] SDL_main entered pid={getpid()} t={DateTime.Now:yyyy-MM-dd HH:mm:ss}\n";
+        byte[] probe = System.Text.Encoding.ASCII.GetBytes(probeStr);
+        int pfd = open("/data/storage/el2/base/haps/entry/files/probe.log", 0x441 /*O_WRONLY|O_CREAT|O_APPEND*/, 420);
         fixed (byte* pp = probe)
             _ = write(pfd, ref pp[0], probe.Length);
         var dir = "/data/storage/el2/base/haps/entry/files/game";
         _ = mkdir(dir, 0755);
         RedirectFd("/data/storage/el2/base/haps/entry/files/sdv-out.log", 1);
         RedirectFd("/data/storage/el2/base/haps/entry/files/sdv-err.log", 2);
-        // InstallFatalHandlers(); // delegate marshaling 触发 OOM，禁用
-        Console.WriteLine($"[SDV] SDL_main pid={getpid()} — Stardew Valley on OHOS starting");
+        // FatalHandler 已弃用：NativeAOT/GC 在启动期本身会走 SIGSEGV 正常机制，
+        // 我们的 handler 拦截后 ILC 给出的"托管入口 stub"路径反而杀死启动
+        // （"Invalid Program: attempted to call a UnmanagedCallersOnly method"）。
+        // 崩溃定位由探针承担（最后一条"进入"无"返回"即崩点）。
+        // InstallFatalHandlers();
+        Console.WriteLine($"[SDV] SDL_main pid={getpid()} t={DateTime.Now:yyyy-MM-dd HH:mm:ss} — Stardew Valley on OHOS starting");
         {
             // 从 hap rawfile 拷贝 Content（bundleCodeDir 由 ArkTS 启动时 setenv）
             var bundleDirPtr = getenv("SDV_BUNDLE_DIR");

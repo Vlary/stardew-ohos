@@ -37,6 +37,8 @@ all)
     patch_sdv
     ./openal-shim/build.sh
     cp openal-shim/libopenal.so hap/entry/libs/arm64-v8a/libopenal.so
+    ./lz4-shim/build.sh
+    cp lz4-shim/liblwjgl_lz4.so hap/entry/libs/arm64-v8a/liblwjgl_lz4.so
     ./build-game.sh stardew-host libmain.so
     ;&
 host)

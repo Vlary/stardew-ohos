@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using Mono.Cecil;
+using Mono.Cecil.Rocks;
 
 // 用法: sdv-patch <Stardew Valley.dll> <输出>
 // 给与顶级类型 XML 名冲突的嵌套类型加 XmlType 别名（sgen 反射扫描需要）
@@ -204,6 +205,8 @@ foreach (var t in EnumAllTypes(mod))
         var logEx = new MethodReference("LogException", asm.MainModule.TypeSystem.Void, rfType) { HasThis = false };
         logEx.Parameters.Add(new ParameterDefinition(new TypeReference("System", "Exception", asm.MainModule, asm.MainModule.TypeSystem.CoreLibrary)));
 
+        target.Body.SimplifyMacros(); // 短分支→长分支（防插入导致偏移溢出）
+        target.Body.MaxStackSize += 16;
         var ilp = target.Body.GetILProcessor();
         int n = 0;
         foreach (var eh in target.Body.ExceptionHandlers)
@@ -249,6 +252,8 @@ foreach (var t in EnumAllTypes(mod))
         concat3.Parameters.Add(new ParameterDefinition(stringType));
         concat3.Parameters.Add(new ParameterDefinition(stringType));
 
+        trg2.Body.SimplifyMacros(); // 短分支→长分支（防插入导致偏移溢出）
+        trg2.Body.MaxStackSize += 16;
         var ilp2 = trg2.Body.GetILProcessor();
         int probes = 0;
         foreach (var ins in trg2.Body.Instructions.ToList())
@@ -334,6 +339,21 @@ foreach (var t in EnumAllTypes(mod))
         ("LidgrenServer", "initialize"),
         ("GameServer", "startServer"),
         ("Game1", "loadForNewGame"),
+        // 远端 PC 连接处理链（崩点嫌疑段：连接握手 → farmhand 请求 → 读 Farmer → 加入）
+        ("LidgrenServer", "parseDataMessageFromClient"),
+        ("LidgrenServer", "sendVersionInfo"),
+        ("LidgrenServer", "statusChanged"),
+        ("LidgrenServer", "playerDisconnected"),
+        ("GameServer", "checkFarmhandRequest"),
+        ("GameServer", "rejectFarmhandRequest"),
+        ("GameServer", "sendLocation"),
+        ("Multiplayer", "readFarmer"),
+        ("Multiplayer", "addPlayer"),
+        ("Multiplayer", "receivePlayerIntroduction"),
+        ("Multiplayer", "broadcastPlayerIntroduction"),
+        ("Multiplayer", "writeObjectFullBytes"),
+        ("Multiplayer", "locationRoot"),
+        ("Game1", "updateCellarAssignments"),
     };
     var hRef = asm.MainModule.AssemblyReferences.First(a => a.Name == "OHOS.Helper");
     var rfT = new TypeReference("OHOS", "ReflectionFix", asm.MainModule, hRef);
@@ -346,6 +366,11 @@ foreach (var t in EnumAllTypes(mod))
         foreach (var m in ty.Methods)
         {
             if (m.Name != mn || !m.HasBody) continue;
+            // Cecil 修改 IL 的标准前置：短分支(br.s/leave.s)转长分支——插入指令使
+            // 方法变大后，短分支的 1 字节偏移会溢出，写出的 IL 非法（ILC: Invalid IL →
+            // 方法被编译为"永远抛异常"stub）。
+            m.Body.SimplifyMacros();
+            m.Body.MaxStackSize += 16;
             var ilp = m.Body.GetILProcessor();
             var first = m.Body.Instructions[0];
             ilp.InsertBefore(first, Mono.Cecil.Cil.Instruction.Create(Mono.Cecil.Cil.OpCodes.Ldstr, $"[NET] {tn}::{mn} 进入"));
@@ -361,6 +386,40 @@ foreach (var t in EnumAllTypes(mod))
             Console.WriteLine($"[NET] 探针 {tn}::{mn}");
             total++;
         }
+    }
+}
+
+// 4.95 诊断：loadForNewGame 逐调用探针——该方法"进入后无返回"（加载存档期间进程死亡），
+// 在主线程内逐调用打印可精确定位崩在哪一步（循环体内会重复，正好可看进度）。
+{
+    var game1t = asm.MainModule.GetType("StardewValley.Game1");
+    var lfng = game1t == null ? null : game1t.Methods.FirstOrDefault(m => m.Name == "loadForNewGame" && m.HasBody);
+    if (lfng == null) { Console.WriteLine("!! loadForNewGame 未找到"); }
+    else
+    {
+        var hRefL = asm.MainModule.AssemblyReferences.First(a => a.Name == "OHOS.Helper");
+        var rfTL = new TypeReference("OHOS", "ReflectionFix", asm.MainModule, hRefL);
+        var logSL = new MethodReference("LogString", asm.MainModule.TypeSystem.Void, rfTL) { HasThis = false };
+        logSL.Parameters.Add(new ParameterDefinition(asm.MainModule.TypeSystem.String));
+        lfng.Body.SimplifyMacros(); // 同 4.9：短分支→长分支，防偏移溢出（Invalid IL）
+        lfng.Body.MaxStackSize += 16;
+        var ilpL = lfng.Body.GetILProcessor();
+        int nL = 0;
+        foreach (var ins in lfng.Body.Instructions.ToList())
+        {
+            if (ins.OpCode != Mono.Cecil.Cil.OpCodes.Call && ins.OpCode != Mono.Cecil.Cil.OpCodes.Callvirt && ins.OpCode != Mono.Cecil.Cil.OpCodes.Newobj) continue;
+            if (ins.Operand is MethodReference mrL && mrL.DeclaringType.Name == "ReflectionFix") continue;
+            string label = ins.Operand is MethodReference mmL ? mmL.DeclaringType.Name + "::" + mmL.Name : "?";
+            // constrained./tail. 等 IL 前缀必须紧跟其修饰的 callvirt——探针插到前缀之前
+            var anchor = ins;
+            for (var pv = ins.Previous; pv != null && pv.OpCode.OpCodeType == Mono.Cecil.Cil.OpCodeType.Prefix; pv = pv.Previous)
+                anchor = pv;
+            ilpL.InsertBefore(anchor, Mono.Cecil.Cil.Instruction.Create(Mono.Cecil.Cil.OpCodes.Ldstr, "[NET] lfng > " + label));
+            ilpL.InsertBefore(anchor, Mono.Cecil.Cil.Instruction.Create(Mono.Cecil.Cil.OpCodes.Call, logSL));
+            nL++;
+        }
+        Console.WriteLine($"[NET] loadForNewGame 逐调用探针 x{nL}");
+        total += nL;
     }
 }
 

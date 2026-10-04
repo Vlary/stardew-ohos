@@ -198,6 +198,11 @@ class P
                 Console.WriteLine($"[xnbtool] packtex {args[5]} {w}x{h} fmt={fmt} (原 {w0}x{h0} levels={levels}) → {packed.Length}B");
                 return 0;
             }
+            case "patchdata":
+            {
+                // patchdata <in.xnb> <out.xnb> <键> <字段> <新值>
+                return PatchData.Run(args[1], args[2], args[3], args[4], args[5]);
+            }
             case "replace":
             {
                 var d = File.ReadAllBytes(args[1]);

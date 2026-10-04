@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- 本机 JIT 运行用的原版 Lidgren（探针版 dll 依赖 OHOS.Helper，不能在 PC 上跑） -->
+    <Reference Include="Lidgren.Network">
+      <HintPath>/tmp/Lidgren.Network.orig.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>
