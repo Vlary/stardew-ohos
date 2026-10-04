@@ -13,7 +13,7 @@ ok()  { printf '\033[32m%s\033[0m\n' "$1"; }
 FILES=$(git ls-files)
 
 # 排除第三方上游源码/文档（SDL2 官方代码、示例工程），仅扫描本项目自有代码
-EXCLUDE='sdl2-ohos/(include|configure|acinclude|VisualC-WinRT|VisualC|android-project|android-project-ant|Xcode|cmake|docs|test|src/core/winrt|src/video/(winrt|windows|uikit|cocoa|x11|wayland|kmsdrm|raspberry|vivante|android|directfb|dummy|khronos)|src/audio/(coreaudio|directsound|winmm|android|pulseaudio|alsa|dummy|netbsd|emscripten|haiku|nacl|paudio|pipewire|psp|sndio|vita|wasapi|openslES)|src/misc/(mac|dummy|unix/.*mac)|src/haptic/(android|darwin|dummy|windows|hidapi|linux)|src/thread/(windows|pthread|stdcpp|generic)/|src/(hidapi|render/opengl|test|main|filesystem/unix)/|visualtest/|src/joystick/(windows|darwin|bsd|haiku|hidapi|iphoneos|android|steam|emscripten|psp))|toolwrap/|scripts/'
+EXCLUDE='lz4-shim/(lz4\.c|lz4\.h)|sdl2-ohos/(include|configure|acinclude|VisualC-WinRT|VisualC|android-project|android-project-ant|Xcode|cmake|docs|test|src/core/winrt|src/video/(winrt|windows|uikit|cocoa|x11|wayland|kmsdrm|raspberry|vivante|android|directfb|dummy|khronos)|src/audio/(coreaudio|directsound|winmm|android|pulseaudio|alsa|dummy|netbsd|emscripten|haiku|nacl|paudio|pipewire|psp|sndio|vita|wasapi|openslES)|src/misc/(mac|dummy|unix/.*mac)|src/haptic/(android|darwin|dummy|windows|hidapi|linux)|src/thread/(windows|pthread|stdcpp|generic)/|src/(hidapi|render/opengl|test|main|filesystem/unix)/|visualtest/|src/joystick/(windows|darwin|bsd|haiku|hidapi|iphoneos|android|steam|emscripten|psp))|toolwrap/|scripts/'
 
 hit() {
     local name="$1" pattern="$2"
