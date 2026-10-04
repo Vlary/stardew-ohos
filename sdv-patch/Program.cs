@@ -255,6 +255,7 @@ foreach (var t in EnumAllTypes(mod))
         trg2.Body.SimplifyMacros(); // 短分支→长分支（防插入导致偏移溢出）
         trg2.Body.MaxStackSize += 16;
         var ilp2 = trg2.Body.GetILProcessor();
+#if false // 诊断探针（正式版禁用）：TryReadSaveFile 路径探针
         int probes = 0;
         foreach (var ins in trg2.Body.Instructions.ToList())
         {
@@ -271,6 +272,7 @@ foreach (var t in EnumAllTypes(mod))
         }
         Console.WriteLine($"TryReadSaveFile: 路径探针 x{probes}");
         total += probes;
+#endif
 
         /* 追加：IOException 捕获也透传 */
         var logExRef = new MethodReference("LogException", asm.MainModule.TypeSystem.Void, rfType2) { HasThis = false };
@@ -289,6 +291,7 @@ foreach (var t in EnumAllTypes(mod))
             }
         }
 
+#if false // 诊断探针（正式版禁用）：流长度 + 反序列化前后标记
         /* 追加：流长度 + 反序列化前后标记 */
         var streamType = new TypeReference("System.IO", "Stream", asm.MainModule, asm.MainModule.TypeSystem.CoreLibrary);
         var logLen = new MethodReference("LogStreamLen", asm.MainModule.TypeSystem.Void, rfType2) { HasThis = false };
@@ -329,9 +332,11 @@ foreach (var t in EnumAllTypes(mod))
                 total++;
             }
         }
+#endif
     }
 }
 
+#if false // 诊断探针（正式版禁用）：4.9 联机服务器路径探针
 // 4.9 诊断：联机服务器路径探针（LidgrenServer.initialize / GameServer.startServer / Game1.loadForNewGame）
 {
     var probeNames = new (string type, string method)[]
@@ -354,6 +359,20 @@ foreach (var t in EnumAllTypes(mod))
         ("Multiplayer", "writeObjectFullBytes"),
         ("Multiplayer", "locationRoot"),
         ("Game1", "updateCellarAssignments"),
+        // PC 玩家"进房子"（warp）链：客户端消息入口 → 主机执行 warp → 服务器介绍
+        ("GameServer", "processIncomingMessage"),
+        ("GameServer", "warpFarmer"),
+        ("GameServer", "sendServerIntroduction"),
+        ("Multiplayer", "readObjectFull"),
+        // warp 触发/失败专项：本地 warp → 找地点 → 淡出完成 → 向服务器请求地点信息
+        ("Game1", "warpFarmer"),
+        ("Game1", "performWarpFarmer"),
+        ("Game1", "onFadeToBlackComplete"),
+        ("Game1", "requestLocationInfoFromServer"),
+        ("GameLocation", "warpFarmer"),
+        ("Multiplayer", "isActiveLocation"),
+        ("Game1", "getLocationFromName"),
+        ("Game1", "getLocationRequest"),
     };
     var hRef = asm.MainModule.AssemblyReferences.First(a => a.Name == "OHOS.Helper");
     var rfT = new TypeReference("OHOS", "ReflectionFix", asm.MainModule, hRef);
@@ -388,7 +407,9 @@ foreach (var t in EnumAllTypes(mod))
         }
     }
 }
+#endif
 
+#if false // 诊断探针（正式版禁用）：4.95 loadForNewGame 逐调用探针
 // 4.95 诊断：loadForNewGame 逐调用探针——该方法"进入后无返回"（加载存档期间进程死亡），
 // 在主线程内逐调用打印可精确定位崩在哪一步（循环体内会重复，正好可看进度）。
 {
@@ -422,6 +443,7 @@ foreach (var t in EnumAllTypes(mod))
         total += nL;
     }
 }
+#endif
 
 // 5. 存档路径固定到沙箱绝对路径：GetAppDataFolder 里的
 //    Environment.GetFolderPath(SpecialFolder.ApplicationData) 在设备上返回 ""

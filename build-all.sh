@@ -24,10 +24,15 @@ patch_sdv() {
     dotnet sdv-patch/bin/Release/net9.0/sdv-patch.dll "$STEAM/Stardew Valley.dll" \
         game-files/Stardew Valley.dll helper/bin/Release/netstandard2.0/OHOS.Helper.dll
 }
+patch_lidgren() {
+    dotnet tools/lidgren-patch/bin/Release/net9.0/lidgren-patch.dll "$STEAM/Lidgren.Network.dll" \
+        game-files/Lidgren.Network.dll
+}
 build_patches() {
     dotnet build mg-patch -c Release | grep -E '已成功| error ' || true
     dotnet build sdv-patch -c Release | grep -E '已成功| error ' || true
     dotnet build helper -c Release | grep -E '已成功| error ' || true
+    dotnet build tools/lidgren-patch -c Release | grep -E '已成功| error ' || true
 }
 
 case $MODE in
@@ -35,6 +40,7 @@ all)
     build_patches
     patch_mg
     patch_sdv
+    patch_lidgren
     ./openal-shim/build.sh
     cp openal-shim/libopenal.so hap/entry/libs/arm64-v8a/libopenal.so
     ./lz4-shim/build.sh
